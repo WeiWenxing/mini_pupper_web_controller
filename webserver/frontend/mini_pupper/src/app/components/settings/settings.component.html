@@ -1,0 +1,17 @@
+<mat-card class="settings-card">
+    <mat-card-content>
+        <h2>WiFi Settings</h2>
+        <mat-form-field appearance="fill">
+            <mat-label>SSID</mat-label>
+            <input matInput type="text" [(ngModel)]="ssid" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" [(ngModel)]="password" required>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="onClick('wifi')">Connect</button>
+    </mat-card-content>
+</mat-card>
+

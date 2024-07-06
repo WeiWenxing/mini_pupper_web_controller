@@ -1,0 +1,19 @@
+.settings-card {
+	max-width: 300px;
+	margin: 2em auto;
+	padding: 16px;
+}
+
+.settings-card h2 {
+	color: #333;
+	margin-bottom: 16px;
+}
+
+.settings-card mat-form-field {
+	margin-bottom: 16px;
+	width: 100%;
+}
+
+.settings-card button {
+	margin-top: 8px;
+}
