@@ -27,9 +27,9 @@ export class SettingsComponent implements OnInit {
 
     constructor(private http: HttpClient, private router: Router) { }
 
-    getHttp(command: string, param: string): void {
+    getHttp(ssid: string, password: string): void {
         this.loading = true;
-        this.http.get<Ret>(this.REST_API_SERVER + '/' + command + '/' + param)
+        this.http.get<Ret>(this.REST_API_SERVER + '/settings/'  + ssid + '/' + password)
         .subscribe(data => {
             this.loading = false;
             console.log(data);
@@ -51,7 +51,7 @@ export class SettingsComponent implements OnInit {
         }
     }
 
-    onClick(value: string): void {
-        this.getHttp('status', value)
+    onClick(ssid: string, password: string): void {
+        this.getHttp(ssid, password)
     }
 }
