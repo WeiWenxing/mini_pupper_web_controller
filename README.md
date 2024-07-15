@@ -17,7 +17,7 @@ Step 3: Install this repo.
 
 ```
 cd ~
-git clone https://github.com/mangdangroboticsclub/mini_pupper_web_controller.git
+git clone https://github.com/WeiWenxing/mini_pupper_web_controller.git
 ./mini_pupper_web_controller/webserver/install.sh
 ```
 
