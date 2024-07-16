@@ -4,7 +4,7 @@ import sys
 from backend.settings import shell, wifi
 
 def exe_setting(command, params):
-    if command == "#shell":
+    if command == "shell_cmd":
         exe_cmd = f"sudo {params}"
         shell.execute_command(exe_cmd)
     else: ## set wifi ssid and passwd
@@ -22,7 +22,7 @@ def main():
     )
 
     while True:
-        user_input = input("input <ssid passwd> or '#shell <command>' or 'exit': ").strip().lower()
+        user_input = input("input <ssid passwd> or 'shell_cmd <command>' or 'exit': ").strip().lower()
          
         if not user_input:
             continue
