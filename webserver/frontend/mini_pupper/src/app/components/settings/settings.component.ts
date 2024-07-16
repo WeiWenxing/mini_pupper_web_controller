@@ -56,6 +56,6 @@ export class SettingsComponent implements OnInit {
     }
 
     onShellClick(command: string): void {
-        this.getHttp("shell", command)
+        this.getHttp("#shell", command)
     }
 }
