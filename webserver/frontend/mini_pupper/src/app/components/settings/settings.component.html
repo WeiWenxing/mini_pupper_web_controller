@@ -15,4 +15,7 @@
       <button mat-raised-button color="primary" [disabled]="!wifiForm.valid">Connect</button>
     </form>
   </mat-card-content>
+  <mat-card-content>
+      <button mat-raised-button color="warn" (click)="onShellClick('poweroff')">Reboot</button>
+  </mat-card-content>
 </mat-card>

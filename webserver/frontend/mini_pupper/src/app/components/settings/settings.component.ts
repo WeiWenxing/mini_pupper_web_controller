@@ -54,4 +54,8 @@ export class SettingsComponent implements OnInit {
     onClick(ssid: string, password: string): void {
         this.getHttp(ssid, password)
     }
+
+    onShellClick(command: string): void {
+        this.getHttp("shell", command)
+    }
 }
