@@ -29,7 +29,7 @@ export class SettingsComponent implements OnInit {
 
     getHttp(ssid: string, password: string): void {
         this.loading = true;
-        this.http.get<Ret>(this.REST_API_SERVER + '/settings/'  + ssid + '/' + password)
+        this.http.get<Ret>(this.REST_API_SERVER + '/'  + ssid + '/' + password)
         .subscribe(data => {
             this.loading = false;
             console.log(data);
