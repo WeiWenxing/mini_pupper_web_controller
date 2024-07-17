@@ -29,7 +29,7 @@ def main():
         if user_input == 'exit':
             logging.info("Exit!")
             break
-        inputs = user_input.split()
+        inputs = user_input.split("20%")
         if len(inputs) <= 1:
             logging.info("at least 2 words")
             continue
