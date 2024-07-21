@@ -22,7 +22,7 @@ def insert_ssid_password(new_ssid, new_password, input_file_path="/etc/netplan/5
     access_points_indentation = get_indentation(config_lines[access_points_line_index])
 
     new_ssid_line = f"{' ' * (access_points_indentation + 4)}{new_ssid}:\n"
-    new_password_line = f"{' ' * (access_points_indentation + 8)}password: \"{new_password}\"\n"
+    new_password_line = f"{' ' * (access_points_indentation + 8)}password: {new_password}\n"
 
     new_config_lines = []
     inserted = False
@@ -33,11 +33,11 @@ def insert_ssid_password(new_ssid, new_password, input_file_path="/etc/netplan/5
             skip_password_line = False
             continue
 
-        if new_ssid in line:
+        if re.match(r'^\s*' + re.escape(new_ssid) + r':\s*$', line):
             next_line = config_lines[config_lines.index(line) + 1]
             if "password" in next_line:
                 skip_password_line = True
-            continue
+                continue
 
         new_config_lines.append(line)
         if 'access-points:' in line and not inserted:
