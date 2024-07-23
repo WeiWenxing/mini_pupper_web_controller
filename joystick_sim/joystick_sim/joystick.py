@@ -3,7 +3,7 @@ import os
 import threading
 from collections import deque
 from enum import Enum
-from UDPComms import Publisher
+from joystick_sim.UDPComms import Publisher
 
 
 class Commands(Enum):
@@ -40,7 +40,7 @@ class Joystick(threading.Thread):
         self.the_deque = deque()
         self.the_command = None
         if self.publish:
-            self.pub = Publisher(8830)
+            self.pub = Publisher(8830, "127.0.0.1")
         threading.Thread.__init__(self)
 
     def push_L1(self):

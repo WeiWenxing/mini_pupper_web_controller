@@ -28,6 +28,7 @@ else
 fi
 
 sudo ln -s $BASEDIR/web-controller.service /etc/systemd/system/
+sudo cp web-controller /usr/local/bin/
 sudo systemctl daemon-reload
 sudo systemctl enable web-controller
 sudo systemctl start web-controller
