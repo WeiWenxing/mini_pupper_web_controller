@@ -1,0 +1,9 @@
+$ cat install.txt
+sudo pip install webserver/backend
+sudo pip install joystick_sim
+
+如果运行失败:
+VERSION=$(./get-version.sh)
+
+sudo PBR_VERSION=$VERSION pip install webserver/backend
+sudo PBR_VERSION=$VERSION pip install joystick_sim
